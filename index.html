@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stage One</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1 data-testid="slackUserName" style="text-align: center;">Adam Rashid</h1>
+        <img src="https://ca.slack-edge.com/T05FFAA91JP-U05S11BTT6C-947c9ee36ed7-512" alt="Adam Rashid" data-testid="slackDisplayImage">
+        <p data-testid="currentDayOfTheWeek">Today is: <span id="currentDayOfWeek"></span></p>
+        <p id="currentUTCTimeMillis" data-testid="currentUTCTime"></p>
+        <p data-testid="myTrack">My track is Frontend</p>
+        <a href="https://github.com/adam3rashid" data-testid="githubURL">My Github Link</a>
+    </div>
+</body>
+</html>
+
+<script>
+    const currentDate = new Date();
+    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const dayIndex = currentDate.getDay();
+    const currentDay = daysOfWeek[dayIndex];
+    document.getElementById('currentDayOfWeek').textContent = currentDay;
+
+    const currentTimeInMilliseconds = new Date().getTime();
+    document.getElementById('currentUTCTimeMillis').textContent = `Current UTC Time in Milliseconds: ${currentTimeInMilliseconds}`;
+    </script>
+</body>
+</html>
+
