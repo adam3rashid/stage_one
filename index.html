@@ -12,7 +12,7 @@
         <p data-testid="currentDayOfTheWeek"><span id="currentDayOfWeek"></span></p>
         <p id="currentUTCTimeMillis" data-testid="currentUTCTime"></p>
         <p data-testid="myTrack">Frontend</p>
-        <a href="https://github.com/adam3rashid/stage_one" data-testid="githubURL">My Github Link</a>
+        <a href="https://github.com/adam3rashid" data-testid="githubURL">My Github Link</a>
     </div>
 </body>
 </html>
@@ -25,7 +25,7 @@
     document.getElementById('currentDayOfWeek').textContent = currentDay;
 
     const currentTimeInMilliseconds = new Date().getTime();
-    document.getElementById('currentUTCTimeMillis').textContent = `Current UTC Time in Milliseconds: ${currentTimeInMilliseconds}`;
+    document.getElementById('currentUTCTimeMillis').textContent = `${currentTimeInMilliseconds}`;
     </script>
 </body>
 </html>
